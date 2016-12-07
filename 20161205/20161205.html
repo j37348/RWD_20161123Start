@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+		.clearfix::after {
+			content: "";
+			clear: both;
+			display: block;
+		}
+		
+		
+		
+		.container {
+			width: 100%;
+			background-color: #ddd;
+			display: flex;
+			flex-direction: row;
+			justify-content: space-around;
+			align-items: center;
+		}
+		.box1 {
+			width: 300px;
+			background-color: #b46b6b;
+		}
+		.box2 {
+			width: 300px;
+			background-color: #5fad68;
+		}
+		.box3 {
+			width: 300px;
+			background-color: #6b76b4;
+		}
+		
+		
+		
+		.abs {
+			width: 100px;
+			height: 100px;
+			background-color: #fa0;
+			position: absolute;
+			top: 200px;
+			left: 100px;
+		}
+		.father {
+			position: relative;
+			width: 300px;
+			height: 300px;
+			background-color: #666;
+		}
+		.son {
+			position: absolute;
+			width: 50px;
+			height: 50px;
+			background-color: #0fa;
+			right: 10px;
+			bottom: 10px;
+		}
+		
+		
+		
+		.trans {
+			width: 100px;
+			height: 100px;
+			background-color: #6b76b4;
+			transition: background-color .6s, width .6s .3s;
+		}
+		.trans:hover {
+			width: 300px;
+			height: 100px;
+			background-color: #b46b6b;
+		}
+		
+		
+		
+		nav {
+			width: 960px;
+			margin: auto;
+		}
+		.logo {
+			float: left;
+			width: 100px;
+			height: 50px;
+			background-color: #5fad68;
+		}
+		.menu {
+			float: right;
+		}
+		.menu li {
+			float: left;
+			list-style-type: none;
+		}
+		.menu a {
+			text-decoration: none;
+			height: 50px;
+			width: 100px;
+			text-align: center;
+			display: block;
+			line-height: 50px;
+			font-family: tahoma;
+			transition: all .3s;
+		}
+		.menu a:hover {
+			background-color: #fa0;
+		}
+		
+		
+		
+		.abscenter {
+			height: 600px;
+			width: 600px;
+			border: 1px solid #333;
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			margin: auto;
+		}
+		
+		.tblcenter {
+			width: 500px;
+			height: 500px;
+			display: table;
+			background-color: #d4e8b5;
+			margin: auto;
+		}
+		.content {
+			display: table-cell;
+/*			width: 200px;*/
+			vertical-align: middle;
+		}
+	</style>
+</head>
+<body>
+	<nav class="clearfix">
+		<div class="logo"></div>
+		<div class="menu">
+			<ul>
+				<li><a href="#">About</a></li>
+				<li><a href="#">Product</a></li>
+				<li><a href="#">Service</a></li>
+				<li><a href="#">Contact</a></li>
+			</ul>
+		</div>
+	</nav>
+	
+	
+	
+	<div class="tblcenter">
+		<div class="content">
+			<h1>asdfg</h1>
+			<p>zxxcvbbaasdgg</p>
+		</div>
+	</div>
+
+	
+	<div class="abscenter">
+		<h1>QWERT</h1>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati error, blanditiis vero. Asperiores natus ducimus, voluptatem atque, temporibus aliquam consectetur sapiente numquam, explicabo facere praesentium. Ipsum debitis deserunt error placeat.</p>
+	</div>
+
+
+	<div class="trans"></div>
+
+
+	<div class="abs"></div>
+	<div class="father">
+		<div class="son"></div>
+	</div>
+	
+	<div class="container">
+		<div class="box1">
+			<h1>QWERT</h1>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur cupiditate aliquam, dolorum culpa? Adipisci eveniet quasi temporibus voluptatibus ex. Laboriosam illum facere, ipsam fugit dolorem doloribus. Quis aspernatur, quas. Ut.</p>
+		</div>
+		<div class="box2">
+			<h1>ASDFGH</h1>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis repellat accusamus ut quas sit a, modi accusantium autem vero eveniet voluptatum, tempore. Itaque, ullam deserunt aperiam! Aut enim, nobis perspiciatiscusamus ut quas sit a, modi accusantium autem vero eveniet voluptatum, tempore. Itaqueaccusamus ut quas sit a, modi accusantium autem vero eveniet voluptatum, tempore. Itaque, ullam deserunt aperiam! Aut enim, nobis perspiciatiscusamus ut quas sit a, modi accusantium autem vero eveniet voluptatum, tempore. Itaqueaccusamus ut quas sit a, modi accusantium autem vero eveniet voluptatum, tempore. Itaque, ullam deserunt aperiam! Aut enim, nobis perspiciatiscusamus ut quas sit a, modi accusantium autem vero eveniet voluptatum, tempore. Itaque, ullam deserunt aperiam! Aut enim, nobis perspiciatiscusamus ut quas sit a, modi accusantium autem vero eveniet voluptatum, tempore. Itaque, ullam deserunt aperiam! Aut enim, nobis perspiciatis.</p>
+		</div>
+		<div class="box3">
+			<h1>ZXCVBN</h1>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae qui, beatae temporibus omnis numquam, dolore tempore optio, enim possimus facilis eum ad tempora. Quod corrupti modi magnam est voluptate placeat.Lorem ipsum doloonsectetur adipisicing elit. Eius numquam, debitis fugit! Et volupatesor sit amet, consectetur adipisicing elit. Eius numquam, debitis fugit! Et voluptates vero sequi soluta repellat veritatis omnis quaerat, necessitatibus id, consectetur debitis, ea pariatur, tempora laudantium voluptatibus!</p>
+		</div>
+    </div>
+</body>
+</html>
