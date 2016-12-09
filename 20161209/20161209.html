@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Roboto');
+        @import url(http://fonts.googleapis.com/earlyaccess/notosanstc.css);
+        body,html,h1,h2,h3,h4,h5,h6,p {
+            margin: 0;
+            padding: 0;
+            font-family: "Roboto","Noto Sans TC",sans-serif;
+        }
+        img {
+            width: 100%;
+            vertical-align: top;
+            border: 0;
+        }
+        .clearfix {
+            content: "";
+            display: block;
+            clear: both;
+        }
+        .full-width {
+            width: 100%;
+        }
+        .fixed-width {
+            width: 1200px;
+            margin: auto;
+        }
+        .col-3 {
+            float: left;
+            width: 380px;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+        .col-4 {
+            float: left;
+            width: 280px;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+        nav {
+            position: fixed;
+/*            width: 960px;*/
+        }
+        .menu ul {
+            float: right;
+        }
+        .menu li {
+            list-style-type: none;
+            float: left;
+        }
+        .menu a {
+            display: block;
+            text-decoration: none;
+            color: #fff;
+            padding-left: 30px;
+            height: 80px;
+            line-height: 80px;
+            font-size: 14px;
+        }
+        .banner {
+/*            display: table;*/
+/*            height: 600px;*/
+            padding: 300px 0;
+            background-image: url(images/01.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: 0 -150px;
+        }
+        .banner div {
+/*            display: table-cell;*/
+/*            vertical-align: middle;*/
+            text-align: center;
+            color: #fff;
+        }
+        .banner h1 {
+            font-size: 36px;
+            letter-spacing: 3px;           
+        }
+    </style>
+</head>
+<body>
+   <nav class="full-width">
+        <div class="fixed-width">
+            <div class="logo"></div>
+            <div class="menu">
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">Journal</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header class="full-width banner">
+        <div>
+            <h1>Sunt In Culpa Offica Deserunt</h1>
+            <p>dolore magna aliqua enim ad minim veniam occaecat</p>
+        </div>
+    </header>
+</body>
+</html>
