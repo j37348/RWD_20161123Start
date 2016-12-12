@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <style>
         @import url('https://fonts.googleapis.com/css?family=Roboto');
@@ -91,13 +92,25 @@
         .content {
             text-align: center;
         }
-        .content img {
+        .content i {
+            display: block;
+            margin: auto;
             width: 100px;
             height: 100px;
             padding: 100px 0 30px;
         }
+        .content .col-3:nth-of-type(1) i {
+            color: #777a86;
+        }
+        .content .col-3:nth-of-type(2) i {
+            color: #8e857c;
+        }
+        .content .col-3:nth-of-type(3) i {
+            color: #718373;
+        }
         .content p {
             text-align: justify;
+            padding-top: 20px;
             padding-bottom: 150px;
         }
         .banner {
@@ -105,22 +118,44 @@
             background-repeat: no-repeat;
             background-size: cover;
             background-position: 0 -100px;
-            height: 220px;
+            padding: 70px 0 70px;
+            text-align: center;
+            color: #fff;
+            font-size: 14px;
+        }
+        .banner p {
+            padding: 10px 0 15px 0;
         }
         .porfolio {
-            background-color: #eee;
+            background-color: #ddd;
             overflow: auto;
             margin-bottom: 100px;
+            padding-top: 50px;
+            text-align: center;
+            color: #666;
+        }
+        .porfolio h1 {
+            font-size: 24px;
+            letter-spacing: 3px;
+        }
+        .porfolio h4 {
+            line-height: 40px;
+            font-size: 14px;
         }
         .porfolio p {
-            text-align: justify;
-            padding: 100px 0 20px 0;           
+            text-align: left;
+            padding: 50px 0 20px 0;
+            border-bottom: 1px solid #ccc;
         }
         .porfolio .pic {
             display: flex;
             align-items: center;
             font-size: 12px;
+            padding-top: 30px;
             padding-bottom: 100px;
+        }
+        .porfolio .pic h2 {
+            text-align: left;
         }
         .porfolio .img {
             height: 80px;
@@ -129,21 +164,33 @@
             background-size: cover;
             background-repeat: no-repeat;
             border-radius: 50%;
-            margin: 0 20px 0 5px;
+            margin: 0 30px 0 10px;
         }
-        .porfolio .col-3:nth-child(1) .img {
+        .porfolio .col-3:nth-child(3) .img {
             background-image: url(images/v05.jpg);
         }
-        .porfolio .col-3:nth-child(2) .img{
+        .porfolio .col-3:nth-child(4) .img{
             background-image: url(images/12.JPG);
         }
-        .porfolio .col-3:nth-child(3) .img{
+        .porfolio .col-3:nth-child(5) .img{
             background-image: url(images/IMG_8404.jpg);
             background-position: right;
         }
+        .category h1 {
+            font-size: 24px;
+            letter-spacing: 3px;
+        }
+        .category h4 {
+            line-height: 40px;
+            font-size: 14px;
+        }
         .category {
             text-align: center;
-
+            color: #666;
+/*            padding-top: 80px*/
+        }
+        .category .col-4 {
+            padding-top: 40px;
         }
         .category p {
             padding-top: 50px;
@@ -158,16 +205,34 @@
             line-height: 50px;
             font-size: 12px;
         }
+        footer p {
+            display: block;
+            float: left;
+        }
+        footer ul {
+            float: right;
+        }
+        footer li {
+            height: 50px;
+            float: left;
+            list-style-type: none;
+        }
+        footer a {
+            display: block;
+            color: #333;
+            text-decoration: none;
+            line-height: 50px;
+        }
     </style>
     <script type="text/javascript">
-    $function(){
+    $(function(){
         $(window).scroll(function(){
             var nowTop=$(window).scrollTop()
             if(nowTop>=$("#nav").height()){
-                $("#nav").stop().animate({backgroundColor:rgba(0,0,0,.7)},300,"linear");
+                $("#nav").animate({backgroundColor:"rgba(0,0,0,.7)"},300,"linear");
             }
         })
-    }
+    })
     </script>
 </head>
 <body>
@@ -193,21 +258,33 @@
     </header>
     <div class="fixed-width content">
         <div class="col-3">
-            <img src="" alt="">
+            <i class="fa fa-anchor fa-4x"></i>
+<!--            <img src="" alt="">-->
+            <h3>QWERTY</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure voluptates aliquid cupiditate maxime velit, exercitationem odit odio consectetur ipsa quia culpa doloremque tempora placeat, voluptate quam ad nostrum reprehenderit consequatur?</p>
         </div>
         <div class="col-3">
-            <img src="" alt="">
+            <i class="fa fa-university fa-4x"></i>
+            <h3>QWERTY</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure voluptates aliquid cupiditate maxime velit, exercitationem odit odio consectetur ipsa quia culpa doloremque t, voluptate quam ad nostrum reprehenderit consequ</p>
         </div>
         <div class="col-3">
-            <img src="" alt="">
+            <i class="fa fa-wifi fa-4x"></i>
+            <h3>QWERTY</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure voluptates aliquid cupiditate maxime velit, exercitationem odit odio consectetur ipsa quia culpa doloremque tempora placeat, voluptate quam ad nostrum reprehenderit consequa</p>
         </div>
     </div>
-    <div class="full-width clearfix banner"></div>
+    <div class="full-width clearfix banner">
+        <div>
+            <h2>QWERTY</h2>
+            <p>who we are & what we do</p>
+            <i class="fa fa-play-circle fa-2x"></i>
+        </div>
+    </div>
     <div class="full-width clearfix porfolio">
         <div class="fixed-width">
+            <h1>QWERTY YUI</h1>
+            <h4>asdfg cmyrecvbnn</h4>
             <div class="col-3">
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure voluptates aliquid cupiditate maxime velit, exercitationem odit odio consectetur ipsa quia culpa doloremque tempora placeat, voluptate quam ad nostrum reprehenderit consequatur?</p>
                 <div class="pic">
@@ -241,6 +318,8 @@
         </div>
     </div>
     <div class="fixed-width clearfix category">
+        <h1>ERAGFKUHJO</h1>
+        <h4>qerioljhfscbndxxvkyrewgj</h4>
         <div class="col-4">
             <img src="images/v01.jpg" alt="">
             <p>Lorem ipsum dolor sit amet, consec</p>
@@ -260,6 +339,14 @@
     </div>
     <footer class="full-width clearfix">
         <p>All Rights Reserved. Created by yachiosky &copy;</p>
+        <div>
+            <ul>
+                <li><a href="#">About</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Facebook</a></li>
+            </ul>
+        </div>
     </footer>
 </body>
 </html>
