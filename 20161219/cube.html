@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Cube</title>
+	<style>
+		.container {
+			position: relative;
+			width: 200px;
+			height: 200px;
+			perspective: 5000px;
+		}
+		.cube {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			transform-style: preserve-3d;
+			top:150px;
+			left: 150px;
+			animation: go 3s infinite;
+		}
+		.cube div {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+/*			opacity: 0.3;*/
+		}
+		.top {
+			background-color: #b78080;
+			transform: rotateX(90deg)translateZ(100px);
+		}
+		.bottom {
+			background-color: #8e8a5b;
+			transform: rotateX(90deg)translateZ(100px);
+		}
+		.left {
+			background-color: #669ea5;
+			transform: rotateY(-90deg)translateZ(100px);
+		}
+		.right {
+			background-color: #b583c4;
+			transform: rotateY(90deg)translateZ(100px);
+		}
+		.front {
+			background-color: #afc172;
+			transform: translateZ(100px);
+		}
+		.back {
+			background-color: #6ead7d;
+			transform: rotateX(180deg)translateZ(100px);
+		}
+		@keyframes go {
+			0% {transform:rotateX(0)rotateY(0)}
+/*			25% {transform:rotateX(90deg)rotateY(90deg)}*/
+			50% {transform:rotateX(180deg)rotateY(180deg)}
+/*			75% {transform:rotateX(270deg)rotateY(270deg)}*/
+			100% {transform:rotateX(360deg)rotateY(360deg0)}
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="cube">
+			<div class="top"></div>
+			<div class="bottom"></div>
+			<div class="left"></div>
+			<div class="right"></div>
+			<div class="front"></div>
+			<div class="back"></div>
+		</div>
+	</div>
+</body>
+</html>

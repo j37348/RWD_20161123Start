@@ -211,6 +211,7 @@
         }
         footer ul {
             float: right;
+			margin: 0;
         }
         footer li {
             height: 50px;
@@ -222,12 +223,13 @@
             color: #333;
             text-decoration: none;
             line-height: 50px;
+            width: 80px;
         }
     </style>
     <script type="text/javascript">
     $(function(){
         $(window).scroll(function(){
-            var nowTop=$(window).scrollTop()
+            var nowTop=$(window).scrollTop();
             if(nowTop>=$("#nav").height()){
                 $("#nav").animate({backgroundColor:"rgba(0,0,0,.7)"},300,"linear");
             }
@@ -338,14 +340,16 @@
         </div>
     </div>
     <footer class="full-width clearfix">
-        <p>All Rights Reserved. Created by yachiosky &copy;</p>
-        <div>
-            <ul>
-                <li><a href="#">About</a></li>
-                <li><a href="#">FAQ</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Facebook</a></li>
-            </ul>
+       <div class="fixed-width">
+            <p>All Rights Reserved. Created by yachiosky &copy;</p>
+            <div>
+                <ul>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Facebook</a></li>
+                </ul>
+            </div>
         </div>
     </footer>
 </body>

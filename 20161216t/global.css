@@ -1,0 +1,44 @@
+        @import url('https://fonts.googleapis.com/css?family=Roboto');
+        @import url(http://fonts.googleapis.com/earlyaccess/notosanstc.css);
+        /*        CSS RESET*/
+        
+        * {
+            box-sizing: border-box;
+            font-family: "Roboto", "Noto Sans TC", sans-serif;
+        }
+        
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p {
+            margin: 0;
+            padding: 0;
+        }
+        
+        p {
+            font-size: 14px;
+            color: #888;
+            line-height: 1.5em;
+        }
+        
+        img {
+            width: 100%;
+            vertical-align: top;
+            border: 0;
+        }
+        /*浮動修復*/
+        
+        .clearfix::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+        /*滿版*/
+        
+        .full-width {
+            width: 100%;
+        }
