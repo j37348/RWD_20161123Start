@@ -229,12 +229,12 @@
     <script type="text/javascript">
     $(function(){
         $(window).scroll(function(){
-            var nowTop=$(window).scrollTop();
-            if(nowTop>=$("#nav").height()){
-                $("#nav").animate({backgroundColor:"rgba(0,0,0,.7)"},300,"linear");
-            }
-        })
-    })
+//            var nowTop = $(window).scrollTop();
+            if($(window).scrollTop()>=$("#nav").height()){
+                $("#nav").animate({backgroundColor:"rgba(200,200,200,.7)"},300,"linear");
+            };
+        });
+    });
     </script>
 </head>
 <body>
