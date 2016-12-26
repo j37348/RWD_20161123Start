@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Form</title>
+	<style>
+		input,select {
+			padding: 10px 15px;
+		}
+		#show {
+			margin: 10px 5px 10px 0;
+			padding: 10px 15px;
+			border: 1px #ccc solid;
+			border-radius: 5px;
+			width: 248px;
+			height: 150px;
+			float: left;
+		}
+		#showdp {
+			margin: 10px 0;
+			padding: 10px 15px;
+			border: 1px #ccc solid;
+			border-radius: 5px;
+			width: 86px;
+			height: 150px;
+			float: left;
+		}
+	</style>
+</head>
+<body>
+	<h1 id="aaa">A Form Below</h1>
+	<script>
+		var text = document.getElementById("aaa").textContent;
+		console.log(text);
+	</script>
+	
+	
+	<form action="" id="myform">
+		<input type="text" id="word" onchange="go()">
+		<input type="submit" value="submit">
+		<select name="" id="dropdown" onchange="dp()">
+			<option value="taipei">Taipei</option>
+			<option value="taichung">Taichung</option>
+			<option value="kaohsiung">Kaohsiung</option>
+			<option value="hsinchu">Hsinchu</option>
+			<option value="hualian">Hualian</option>
+		</select>
+	</form>
+	<div id="show"></div>
+	<div id="showdp"></div>
+	<script>
+		function go(){
+			var test = document.getElementById("word").value;
+//			console.log(test);
+			document.getElementById("show").textContent = test;
+		}
+		
+		function dp(){
+			var dpValue = myform.dropdown.options[1].value;
+			var dpText = myform.dropdown.options[1].textContent;
+			document.getElementById("showdp").textContent = dpValue;
+			console.log(dpText);
+		}
+	</script>
+
+</body>
+</html>

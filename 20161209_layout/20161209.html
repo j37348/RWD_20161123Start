@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <line rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></line>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <style>
         @import url('https://fonts.googleapis.com/css?family=Roboto');
@@ -46,6 +47,10 @@
             position: fixed;
 /*            width: 960px;*/
         }
+        .jsbg {
+            background-color: rgba(100,100,100,.9);
+            height: 80px;
+        }
         .scrollnav {
             background-color: rgba(0,0,0,.8);
         }
@@ -66,9 +71,11 @@
             font-size: 14px;
             transition: all .3s;
         }
+/*
         .menu a:hover {
             color: #666;
         }
+*/
         header {
 /*            display: table;*/
 /*            height: 600px;*/
@@ -229,12 +236,14 @@
     <script type="text/javascript">
     $(function(){
         $(window).scroll(function(){
-//            var nowTop = $(window).scrollTop();
-            if($(window).scrollTop()>=$("#nav").height()){
-                $("#nav").animate({backgroundColor:"rgba(200,200,200,.7)"},300,"linear");
-            };
-        });
-    });
+            var nowTop = $(window).scrollTop();
+            if(nowTop>=$("#nav").height()){
+                $("#nav").addClass("jsbg",1000,"easeIn");
+            }else{
+                $("#nav").removeClass("jsbg",1000,"easeIn");
+            }
+        })
+    })
     </script>
 </head>
 <body>
