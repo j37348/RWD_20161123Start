@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        input, select {
+            padding: 10px 15px;
+            width: 120px;
+        }
+    </style>
+    <script>
+        var district = new Array();
+        district[0] = [];
+        district[1] = ["北投區","士林區","中山區","內湖區","大同區","松山區","萬華區",
+                       "中正區","大安區","信義區","南港區","文山區"];
+        district[2] = ["板橋區","三重區","中和區","永和區","新莊區","新店區","土城區",
+                       "蘆洲區","樹林區","鶯歌區","三峽區","淡水區","瑞芳區","汐止區",
+                       "五股區","泰山區","林口區","八里區","深坑區","石碇區","坪林區",
+                       "三芝區","石門區","金山區","萬里區","平溪區","雙溪區","貢寮區","烏來區"];
+        district[3] = ["桃園區","中壢區","八德區","平鎮區","大溪區","楊梅區","龜山區",
+                       "蘆竹區","大園區","觀音區","新屋區","龍潭區","復興區"];
+        district[4] = ["楠梓區","左營區","鼓山區","三民區","苓雅區","新興區","前金區",
+                       "鹽埕區","前鎮區","旗津區","小港區","鳳山區","茂林區","甲仙區",
+                       "六龜區","杉林區","美濃區","內門區","仁武區","田寮區","旗山區",
+                       "梓官區","阿蓮區","湖內區","岡山區","茄萣區","路竹區","鳥松區",
+                       "永安區","燕巢區","大樹區","大寮區","林園區","彌陀區","橋頭區",
+                       "大社區","那瑪夏區","桃源區"];
+        
+        function godist(index){
+            for(var i=0; i<district[index].length; i++){
+                myForm.district.options[i] = new Option(district[index][i],district[index][i]);
+            }
+            myForm.district.length = district[index].length;
+        }
+    </script>
+</head>
+<body>
+    <form action="" id="myForm">
+        <select name="city" id="city" onchange="godist(this.selectedIndex)">
+            <option value="">請選擇</option>
+            <option value="台北市">台北市</option>
+            <option value="新北市">新北市</option>
+            <option value="桃園市">桃園市</option>
+            <option value="高雄市">高雄市</option>
+        </select>
+        <select name="district" id="district">
+<!--            <option value=""></option>-->
+        </select>
+    </form>
+    <script>
+//        var a = myForm.city.options[0].textContent;
+//        myForm.city.options[3] = new Option("高雄市","高雄市");
+//        console.log(a);
+//        for(var i=0; i<)
+    </script>
+</body>
+</html>
