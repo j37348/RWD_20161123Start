@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <style>
+		.clearfix:after {
+			content: "";
+			display: block;
+			clear: both;
+		}
+		.container {
+			width: 600px;
+			margin: auto;
+		}
+		li {
+			float: left;
+			list-style-type: none;
+		}
+		a {
+			text-decoration: none;
+			color: #333;
+			width: 80px;
+			display: block;
+		}
+		h1 {
+			margin: 0;
+		}
+		.btn {
+			width: 20px;
+			height: 20px;
+			float: left;
+			background-color: #aaa;
+		}
+	</style>
+   <script>
+	   $(document).ready(function(){
+		   $("p").hide();
+		   $("h1").click(function(){
+			   $(this).next().slideToggle(300);
+		   })
+		   
+		   $("li").hide();
+		   $(".btn").click(function(){
+			   $("li").toggle(300);
+		   })
+	   })
+	</script> 
+</head>
+<body>
+
+	<div class="container">
+		<nav class="clearfix">
+			<div class="btn"></div>
+			<ul>
+				<li><a href="#">MENU</a></li>
+				<li><a href="#">MENU</a></li>
+				<li><a href="#">MENU</a></li>
+				<li><a href="#">MENU</a></li>
+			</ul>
+		</nav>
+<!--	<button>click here</button>-->
+		<h1>QWERT</h1>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum fuga 		inventore autem recusandae cum sapiente veniam neque expedita officia 		voluptates commodi magni, temporibus, consectetur illum, doloremque 		similique quia dolores libero!</p>		
+		<h1>QWERT</h1>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum fuga 		inventore autem recusandae cum sapiente veniam neque expedita officia 		voluptates commodi magni, temporibus, consectetur illum, doloremque 		similique quia dolores libero!</p>		
+		<h1>QWERT</h1>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum fuga 		inventore autem recusandae cum sapiente veniam neque expedita officia 		voluptates commodi magni, temporibus, consectetur illum, doloremque 		similique quia dolores libero!</p>
+	</div>
+</body>
+</html>
