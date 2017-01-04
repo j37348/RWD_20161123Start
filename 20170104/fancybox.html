@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="source/jquery.fancybox.pack.js"></script>
+    <script src="source/helpers/jquery.fancybox-thumbs.js"></script>
+    <script src="source/helpers/jquery.fancybox-media.js"></script>
+    <link rel="stylesheet" href="source/jquery.fancybox.css">
+    <link rel="stylesheet" href="source/helpers/jquery.fancybox-thumbs.css">
+    <style>
+		.container {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 100vh;
+		}
+		.box {
+			margin: 2px;
+		}
+		img {
+			width: 200px;
+		}
+		a {
+			text-decoration: none;
+			color: #333;
+		}
+	</style>
+	<script>
+	$(document).ready(function(){
+		$(".fancy").fancybox({
+			openEffect:"elastic",
+			closeEffect:"fade",
+			nextEffect:"elastic",
+			prevEffect:"elastic",
+			openSpeed:500,
+			padding:8,
+			helpers:{
+				thumbs:{
+					width:80,
+					height:80
+				},
+				title:{
+					type:"inside", //float, inside, outside, over
+				}
+			}
+		});
+		$(".fancy-media").fancybox({
+			padding:8,
+			helpers:{
+				media:{}
+			}
+		})
+	})
+	</script>
+</head>
+<body>
+	<div class="container">
+		<div class="box">
+			<a href="images/12.jpg" class="fancy" rel="pic" title="Acron">
+				<img src="images/12.jpg" alt="">
+			</a>
+			<a href="images/17.jpg" class="fancy" rel="pic" title="Bak kut">
+				<img src="images/17.jpg" alt="">
+			</a>
+			<a href="images/20.jpg" class="fancy" rel="pic" title="Sky Wheel">
+				<img src="images/20.jpg" alt="">
+			</a>
+		</div>
+		<div class="box">
+			<a href="https://www.youtube.com/watch?v=uWPhVk_lHdM" class="fancy-media">
+				<img src="http://img.youtube.com/vi/uWPhVk_lHdM/hqdefault.jpg" alt="">
+			</a>
+		</div>
+		<div class="box">
+			<a href="https://www.instagram.com/p/BN9uZfkA92Y" class="fancy-media">
+				Instagram
+			</a>
+		</div>
+	</div>    
+</body>
+</html>
