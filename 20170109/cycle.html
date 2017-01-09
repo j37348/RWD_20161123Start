@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="jquery.cycle.all.js"></script>
+    <style>
+        img {
+            width: 100%!important;
+/*            height: 600px;*/
+        }
+        p {
+            height: 30px;
+        }
+    </style>
+    <script>
+    $(function(){
+        $(".cycle").cycle({
+            timeout:4000
+        });
+        $(".news").cycle({
+            fx:"scrollUp",
+//            delay:-1000
+//            speed:2000,
+            timeout:4000,
+        });
+    })
+    </script>
+</head>
+<body>
+    <div class="cycle">
+        <img src="images/15.JPG" alt="">
+        <img src="images/25.JPG" alt="">
+        <img src="images/29.JPG" alt="">
+    </div>
+    <div class="news">
+        <p>sdfjskdfjsoif</p>
+        <p>xcvnmxcv</p>
+        <p>wqurewioeuriwet</p>
+    </div>
+</body>
+</html>

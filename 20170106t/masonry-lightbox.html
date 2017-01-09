@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="lightbox/css/lightbox.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Roboto');
+        * {
+            box-sizing: border-box;
+            font-family: "Roboto",sans-serif;
+        }
+        .container {
+            margin: auto;
+        }
+        
+        .box {
+            width: 250px;
+            margin: 5px;
+        }
+        
+        .box img {
+            width: 100%;
+            vertical-align: top;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.1.1/masonry.pkgd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.1/imagesloaded.pkgd.min.js"></script>
+    <script src="lightbox/js/lightbox.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            //            $(".container").masonry({
+            //                isFitWidth: true
+            //            });
+            $(".container").imagesLoaded(function () {
+                $(".container").masonry({
+                    isFitWidth: true,
+                });
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+            <a href="https://images.unsplash.com/photo-1483397409577-c117595a71a4?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&s=3fa408c5c16312af44d25bc787755278"data-lightbox="lb">
+                <img src="https://images.unsplash.com/photo-1483397409577-c117595a71a4?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&s=3fa408c5c16312af44d25bc787755278" alt="">
+            </a>
+        </div>
+        <div class="box">
+            <a href="https://images.unsplash.com/photo-1422004694183-cd2f8c55d4d9?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&s=fb883b29ac72389b70af7ca2a8d72ded"data-lightbox="lb">
+                <img src="https://images.unsplash.com/photo-1422004694183-cd2f8c55d4d9?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&s=fb883b29ac72389b70af7ca2a8d72ded" alt="">
+            </a>
+        </div>
+        <div class="box">
+            <a href="https://images.unsplash.com/photo-1450908967266-43bebe2b95fc?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=900&h=1600&fit=crop&s=6faf4614c03bcf7658795e9b16d50ed9"data-lightbox="lb">
+                <img src="https://images.unsplash.com/photo-1450908967266-43bebe2b95fc?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=900&h=1600&fit=crop&s=6faf4614c03bcf7658795e9b16d50ed9" alt="">
+            </a>
+        </div>
+        <div class="box">
+            <a href="https://images.unsplash.com/photo-1453442864704-ed10e72ae978?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&s=8c1fa80a7902cf453777c73d1af433f8"data-lightbox="lb">
+                <img src="https://images.unsplash.com/photo-1453442864704-ed10e72ae978?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&s=8c1fa80a7902cf453777c73d1af433f8" alt="">
+            </a>
+        </div>
+        <div class="box">
+            <a href="https://images.unsplash.com/photo-1473889051109-2de98686f4c2?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=800&h=1600&fit=crop&s=77976f409c060813912118da6ae80fa7"data-lightbox="lb">
+                <img src="https://images.unsplash.com/photo-1473889051109-2de98686f4c2?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=800&h=1600&fit=crop&s=77976f409c060813912118da6ae80fa7" alt="">
+            </a>
+        </div>
+        <div class="box">
+            <a href="https://images.unsplash.com/photo-1477773265277-18890e138cfe?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&s=757a92a5c583c601a2f9a50ff61e5298"data-lightbox="lb">
+                <img src="https://images.unsplash.com/photo-1477773265277-18890e138cfe?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&s=757a92a5c583c601a2f9a50ff61e5298" alt="">
+            </a>
+        </div>
+        <div class="box">
+            <a href="https://images.unsplash.com/photo-1481078702198-2c0b5710c1ba?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=800&h=1600&fit=crop&s=a7a3f357a86f7f8b1871e347b4158a3b"data-lightbox="lb">
+                <img src="https://images.unsplash.com/photo-1481078702198-2c0b5710c1ba?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=800&h=1600&fit=crop&s=a7a3f357a86f7f8b1871e347b4158a3b" alt="">
+            </a>
+        </div>
+        <div class="box">
+            <a href="https://images.unsplash.com/photo-1471476982590-a2e02d8544dd?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&s=d8684d834a7346a32a22c94962f0166b"data-lightbox="lb">
+                <img src="https://images.unsplash.com/photo-1471476982590-a2e02d8544dd?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&s=d8684d834a7346a32a22c94962f0166b" alt="">
+            </a>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <style>
+        * {
+            font-family: tahoma;
+        }
+        a {
+            text-decoration: none;
+            color: #333;
+            display: block;
+            width: 80px;
+            float: left;
+        }
+        .clearfix:after {
+            content: "";
+            display: block;
+            clear:both;
+        }
+        nav {
+            float: right;
+            height: 30px;
+        }
+        #about,#product,#service,#contact {
+            height: 1000px;
+        }
+        #about {
+            background-color: #aeb970;
+            clear:both;
+        }
+        #product {
+            background-color: #70b9b6;
+        }
+        #service {
+            background-color: #709ab9;
+        }
+        #contact {
+            background-color: #b9a870;
+        }
+    </style>
+    <script>
+    $(function(){
+        $("nav a").click(function(){
+            var _link = $(this).data("link");
+            var _offset = $("#"+_link).offset().top;
+//            console.log(_offset);
+            $("html,body").animate({
+                scrollTop:_offset
+            })
+        })
+    })
+    </script>
+</head>
+<body>
+    <nav>
+        <a href="#" data-link="about">About</a>
+        <a href="#" data-link="product">Product</a>
+        <a href="#" data-link="service">Service</a>
+        <a href="#" data-link="contact">Contact</a>
+    </nav>
+    <div id="about"></div>
+    <div id="product"></div>
+    <div id="service"></div>
+    <div id="contact"></div>
+</body>
+</html>

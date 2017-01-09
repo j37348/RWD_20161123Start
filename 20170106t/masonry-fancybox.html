@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="fancybox/jquery.fancybox.css">
+    <style>
+        .container {
+            margin: auto;
+        }
+        
+        .box {
+            width: 250px;
+            box-sizing: border-box;
+            /*            padding: 15px;*/
+        }
+        
+        .box img {
+            width: 100%;
+            vertical-align: top;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="fancybox/jquery.fancybox.pack.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.1.1/masonry.pkgd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.1/imagesloaded.pkgd.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            //            $(".container").masonry({
+            //                isFitWidth: true
+            //            });
+            $(".fancy").fancybox();
+            $(".container").imagesLoaded(function () {
+                $(".container").masonry({
+                    isFitWidth: true,
+                });
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+            <a href="images/01.jpg" class="fancy"><img src="images/01.jpg" alt=""></a>
+        </div>
+        <div class="box">
+            <a href="images/02.jpg" class="fancy"><img src="images/02.jpg" alt=""></a>
+        </div>
+        <div class="box">
+            <a href="images/03.jpg" class="fancy"><img src="images/03.jpg" alt=""></a>
+        </div>
+        <div class="box">
+            <a href="images/04.jpg" class="fancy"><img src="images/04.jpg" alt=""></a>
+        </div>
+        <div class="box">
+            <a href="images/05.jpg" class="fancy"><img src="images/05.jpg" alt=""></a>
+        </div>
+        <div class="box">
+            <a href="images/06.jpg" class="fancy"><img src="images/06.jpg" alt=""></a>
+        </div>
+        <div class="box">
+            <a href="images/07.jpg" class="fancy"><img src="images/07.jpg" alt=""></a>
+        </div>
+        <div class="box">
+            <a href="images/08.jpg" class="fancy"><img src="images/08.jpg" alt=""></a>
+        </div>
+        <div class="box">
+            <a href="images/09.jpg" class="fancy"><img src="images/09.jpg" alt=""></a>
+        </div>
+    </div>
+</body>
+
+</html>

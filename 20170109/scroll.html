@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <style>
+        * {
+            font-family: tahoma;
+        }
+        a {
+            text-decoration: none;
+            color: #333;
+            display: block;
+            width: 80px;
+            float: left;
+
+        }
+        .clearfix:after {
+            content: "";
+            display: block;
+            clear:both;
+        }
+        nav {
+            float: right;
+            height: 30px;
+        }
+        #about,#product,#service,#contact {
+            height: 1000px;
+        }
+        #about {
+            background-color: #aeb970;
+            clear:both;
+        }
+        #product {
+            background-color: #70b9b6;
+        }
+        #service {
+            background-color: #709ab9;
+        }
+        #contact {
+            background-color: #b9a870;
+        }
+    </style>
+    <script>
+    $(function(){
+        var about = $("#about").offset().top;
+        var product = $("#product").offset().top;
+        var service = $("#service").offset().top;
+        var contact = $("#contact").offset().top;
+        
+        $("nav a:nth-of-type(1)").click(function(){
+            $("html,body").animate({
+                scrollTop:about
+            })
+        })
+        $("nav a:nth-of-type(2)").click(function(){
+            $("html,body").animate({
+                scrollTop:product
+            })
+        })
+        $("nav a:nth-of-type(3)").click(function(){
+            $("html,body").animate({
+                scrollTop:service
+            })
+        })
+        $("nav a:nth-of-type(4)").click(function(){
+            $("html,body").animate({
+                scrollTop:contact
+            })
+        })
+        
+    })
+    </script>
+</head>
+<body>
+    <nav>
+        <a href="#">About</a>
+        <a href="#">Product</a>
+        <a href="#">Service</a>
+        <a href="#">Contact</a>
+    </nav>
+    <div id="about"></div>
+    <div id="product"></div>
+    <div id="service"></div>
+    <div id="contact"></div>
+</body>
+</html>
