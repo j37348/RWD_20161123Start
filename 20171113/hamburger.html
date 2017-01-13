@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <style>
+		* {
+            font-family: tahoma;
+            margin: 0;
+        }
+        .clearfix:after {
+            content: "";
+            display: block;
+            clear:both;
+        }
+		.hamburger {
+			position: fixed;
+			right: 10px;
+			top: 10px;
+			width: 50px;
+			height: 50px;
+			background-color: #6d6f8d;
+			cursor: pointer;
+			transition: all .3s;
+		}
+		.hamburger span {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			margin: auto;
+			width: 35px;
+			height: 5px;
+			background-color: #fff;
+			transition: all .3s;
+		}
+		.hamburger span::before {
+			content: "";
+			position: absolute;
+			display: block;
+			top: -12px;
+			height: 5px;
+			width: 35px;
+			background-color: #fff;
+			transition: all .3s;
+		}
+		.hamburger span::after {
+			content: "";
+			position: absolute;
+			display: block;
+			bottom: -12px;
+			height: 5px;
+			width: 35px;
+			background-color: #fff;
+			transition: all .3s;
+		}
+/*
+		.hamburger-x::before {
+			content: "";
+			position: absolute;
+			display: block;
+			width: 150px;
+			height: 50px;
+			top: 10;
+			right: 50px;
+			background-color: #6d6f8d;
+			transition: all .3s;
+		}
+*/
+		.hamburger-x span {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			margin: auto;
+			width: 35px;
+			height: 5px;
+			background-color: transparent;
+			transition: all .3s;
+		}
+		.hamburger-x span::before {
+			content: "";
+			position: absolute;
+			display: block;
+			top: 0;
+			height: 5px;
+			width: 35px;
+			background-color: #fff;
+			transform: rotate(45deg);
+			transition: all .3s;
+		}
+		.hamburger-x span::after {
+			content: "";
+			position: absolute;
+			display: block;
+			bottom: 0;
+			height: 5px;
+			width: 35px;
+			background-color: #fff;
+			transform: rotate(-45deg);
+			transition: all .3s;
+		}
+		
+        nav {
+			position: fixed;
+			right: 10px;
+			top: 60px;
+			width: 200px;
+			background-color: #666;
+        }
+		nav li {
+			list-style-type: none;
+		}
+        nav a {
+            text-decoration: none;
+            display: block;
+			height: 40px;
+			color: #fff;
+			line-height: 40px;
+/*			text-align: center;*/
+        }
+	</style>
+	<script>
+	$(function(){
+		$("nav").hide();
+		$(".hamburger").click(function(){
+			$(this).toggleClass("hamburger-x");
+			$("nav").slideToggle(300);
+		})
+	})
+	</script>
+</head>
+<body>
+    <div class="hamburger">
+    	<span></span>
+    </div>
+    <nav>
+       <ul>
+		   <li><a href="javascript:;">About</a></li>
+		   <li><a href="javascript:;">Product</a></li>
+		   <li><a href="javascript:;">Service</a></li>
+		   <li><a href="javascript:;">Contact</a></li>
+       </ul>
+    </nav>
+</body>
+</html>
