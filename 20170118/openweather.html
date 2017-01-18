@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <style>
+        * {
+            font-family: "georgia";
+        }
+        .container {
+            text-align: center;
+        }
+    </style>
+    <script>
+    $(function(){
+        $.ajax({
+            url:"http://api.openweathermap.org/data/2.5/weather?q=Kaohsiung,tw&appid=7ceb69fe5e1dad50dcfafd9b479fd40e&units=metric",
+            datatype:"json",
+            success:function(e){
+                console.log(e.name);
+                console.log(e.main.temp);
+                console.log(e.weather[0].description);
+                $(".city").text(e.name);
+                $(".temp").text(e.main.temp);
+                $(".descp").text(e.weather[0].description);
+            },
+            error:function(){
+                console.log("AJAX ERROR");
+                alert("ERROR!");
+            }
+        });
+    })
+    </script>
+</head>
+<body>
+    <div class="container">
+        You are at <span class="city"></span> now, <br>
+        The temperature is <span class="temp"></span> C,
+        <span class="descp"></span>.
+    </div>   
+</body>
+</html>
