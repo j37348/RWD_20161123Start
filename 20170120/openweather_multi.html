@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <style>
+        * {
+            font-family: "georgia";
+        }
+        .container {
+/*            text-align: center;*/
+        }
+        img {
+            width: 50px;
+        }
+    </style>
+    <script>
+    $(function(){
+        $.ajax({
+            url:"http://api.openweathermap.org/data/2.5/forecast/daily?q=Kaohsiung,tw&units=metric&cnt=14&appid=7ceb69fe5e1dad50dcfafd9b479fd40e",
+            datatype:"json",
+            success:function(e){
+            var ct = "<h3>City: "+e.city.name+"</h3>";
+                $(".container").append(ct);
+                $(e.list).each(function(){
+                    var myDate = new Date(this.dt*1000);
+                    var year = myDate.getFullYear();
+                    var month = myDate.getMonth()+1;
+                    var date = myDate.getDate();
+                    var day = myDate.getDay();
+                    var DAY = ["日","一","二","三","四","五","六"]
+//                    console.log(date);
+                    var c = "<h4>Date: "+year+"/"+month+"/"+date+" \("+DAY[day]+"\)"+"</h4>";
+                    c += "<div class='col-md-4'>Temp.: "+parseInt(this.temp.min)+" ~ "+parseInt(this.temp.max)+"</div>";
+                    c += "<div class='col-md-4'>"+this.weather[0].description+"</div>";
+//                    c += "<div><img src='http://openweathermap.org/img/w/"+this.weather[0].icon+".png'></div>";
+                    c += "<div class='col-md-4'><img src='images/"+this.weather[0].icon+".png'></div>"
+                    $(".container").append(c);
+                    console.log(this.weather[0].icon);
+                });
+            },
+            error:function(){
+                alert("Error!");
+            }
+        })
+    })
+    </script>
+</head>
+<body>
+    <div class="container"></div>
+</body>
+</html>
